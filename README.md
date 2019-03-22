@@ -1,2 +1,5 @@
 # Python-War
-The card game War programmed in Python
+##### The card game War programmed in Python
+***
+
+Made as a part of a small coding project for a relatively easy class
