@@ -3,3 +3,4 @@
 ***
 
 Made as a part of a small coding project for a relatively easy class
+This will include 1/2 python files for the game.
