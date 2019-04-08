@@ -1,6 +1,7 @@
 import random
 faces = list(range(2, 11))+["Jack", "Queen", "King", "Ace"]
 
+
 class Card:
     """
     This happens to be a card
@@ -12,7 +13,7 @@ class Card:
         self.value = faces.index(face)
   
     def __str__(self):
-        return (str(self.face) + " of " + self.suit)
+        return str(self.face) + " of " + self.suit
 
 
 cards = [Card(face, suit)
@@ -29,7 +30,6 @@ testing = True
 for i in range(int(len(cards)/2)):
     player1.append(cards.pop(0))
     player2.append(cards.pop(0))
-    
 
 
 input("\nPress enter to start war")
