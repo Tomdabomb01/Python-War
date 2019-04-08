@@ -36,27 +36,16 @@ for i in range(int(len(cards)/2)):
 
 def war():
     print("Both players declare war!\n")
-    down1 = []
-    down2 = []
-    for x in range(4):
-        if len(player1) < 1:
-            return True
+    down1, down2 = [], []
 
-        if len(player2) < 1:
-            return True
-
-        down1.insert(0, player1.pop(0))
-        down2.insert(0, player2.pop(0))
-
-    print("Player1: " + str(down1[0]))
-    print("Player2: " + str(down2[0]))
-    while down1[0].value == down2[0].value:
+    while (len(down1) is 0 and len(down2) is 0) or down1[0].value == down2[0].value:
         for x in range(4):
             if len(player1) < 1:
                 return True
 
             if len(player2) < 1:
                 return True
+
             down1.insert(0, player1.pop(0))
             down2.insert(0, player2.pop(0))
 
