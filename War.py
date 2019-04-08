@@ -24,10 +24,9 @@ cards = [Card(face, suit)
 
 
 random.shuffle(cards)
-player1 = []
-player2 = []
+player1, player2 = [], []
 
-testing = True
+testing = False
 
 for i in range(int(len(cards)/2)):
     player1.append(cards.pop(0))
@@ -52,12 +51,7 @@ def war():
         print("Player1: " + str(down1[0]))
         print("Player2: " + str(down2[0]))
 
-    if len(player1) < 1:
-        print("Player 2 has won via war")
-        return True
-
-    if len(player2) < 1:
-        print("Player 1 has won via war")
+    if len(player1) < 1 or len(player2) < 1:
         return True
 
     if down1[0].value > down2[0].value:
@@ -74,15 +68,7 @@ def war():
 
 
 input("\nPress enter to start war")
-while True:
-  
-    if len(player1) < 1:
-        print("Player 2 has won normal")
-        break
-  
-    if len(player2) < 1:
-        print("Player 1 has won normal")
-        break
+while len(player1) > 0 and len(player2) > 0:
   
     print("Player1: "+str(player1[0]))
     print("Player2: "+str(player2[0]))
@@ -103,5 +89,11 @@ while True:
 
     if testing is not True:
         input("Press enter to view the next duel")
+
+if len(player2) < 1:
+    print("Player 1 has won")
+
+else:
+    print("Player 2 has won")
 
 input("Press enter to finish")
