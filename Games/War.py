@@ -1,6 +1,9 @@
 import random
 
 
+__game__ = "War"
+
+
 class Card:
     """
     Card Object
